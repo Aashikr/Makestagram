@@ -20,12 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
+        let initialViewController = UIStoryboard.initialViewController(for: .login)
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
         
-        if let initialViewController = storyboard.instantiateInitialViewController(){
-            window?.rootViewController = initialViewController
-            window?.makeKeyAndVisible()
-        }
         return true
     }
 
