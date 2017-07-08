@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
-class User {
+class User: NSObject {
     let uid: String
     let username: String
     
@@ -30,6 +30,7 @@ class User {
     init(uid: String, username: String){
         self.uid = uid
         self.username = username
+        super.init()
     }
     
     init?(snapshot: DataSnapshot){
@@ -38,11 +39,27 @@ class User {
         else { return nil }
         self.uid = snapshot.key
         self.username = username
+        super.init()
     }
     
-    
-    
-    
+    required init?(coder aDecoder: NSCoder) {
+        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String, let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String else { return nil }
+        
+        self.uid = uid
+        self.username = username
+        super.init()
+        
+        
+        
+    }
+
+}
+
+extension User: NSCoding {
+    func encode(with aCoder: NSCoder){
+        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
+        aCoder.encode(username, forKey: Constants.UserDefaults.username)
+    }
 }
 
 
