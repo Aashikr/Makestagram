@@ -9,6 +9,8 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth.FIRAuth
+import FirebaseAuth.FIRUser
+
 
 struct UserService {
     static func create(_ firUser: FIRUser, username: String, completion: @escaping(User?)->Void){
