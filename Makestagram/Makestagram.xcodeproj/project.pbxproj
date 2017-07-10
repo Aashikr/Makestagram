@@ -29,6 +29,7 @@
 		84EA852E1F13FD570098DBE2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA852D1F13FD570098DBE2 /* Post.swift */; };
 		84EA85301F1405E20098DBE2 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA852F1F1405E20098DBE2 /* UIImage+Size.swift */; };
 		84EA85341F1406EA0098DBE2 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA85331F1406EA0098DBE2 /* StorageReference+Post.swift */; };
+		84EA85361F140AEE0098DBE2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EA85351F140AEE0098DBE2 /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		84EA852D1F13FD570098DBE2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		84EA852F1F1405E20098DBE2 /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "Extensions/UIImage+Size.swift"; sourceTree = "<group>"; };
 		84EA85331F1406EA0098DBE2 /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		84EA85351F140AEE0098DBE2 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 		CFA9EE103FB927B88EBBC9EF /* Pods-Makestagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.debug.xcconfig"; sourceTree = "<group>"; };
 		F57912FDA7ABB4F01B3A5594 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				843058EB1F0E7A2000DC04C5 /* Main.storyboard */,
+				84EA85351F140AEE0098DBE2 /* Home.storyboard */,
 				843058F71F0E7CB100DC04C5 /* Login.storyboard */,
 				843058DB1F0E75B900DC04C5 /* Assets.xcassets */,
 			);
@@ -258,6 +261,7 @@
 				843058ED1F0E7A2000DC04C5 /* Main.storyboard in Resources */,
 				843058F01F0E7A2800DC04C5 /* GoogleService-Info.plist in Resources */,
 				843058DC1F0E75B900DC04C5 /* Assets.xcassets in Resources */,
+				84EA85361F140AEE0098DBE2 /* Home.storyboard in Resources */,
 				843058F81F0E7CB100DC04C5 /* Login.storyboard in Resources */,
 				843058EC1F0E7A2000DC04C5 /* LaunchScreen.storyboard in Resources */,
 			);
