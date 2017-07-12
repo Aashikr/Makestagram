@@ -148,8 +148,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="eVW-ly-bZS" id="SFK-Ai-lWm"/>
-                                    <outlet property="delegate" destination="eVW-ly-bZS" id="sm8-Dc-CXe"/>
+                                    <outlet property="dataSource" destination="eVW-ly-bZS" id="sOt-vm-XrX"/>
+                                    <outlet property="delegate" destination="eVW-ly-bZS" id="PLs-b9-TAm"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -163,7 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Makestagram" id="PRQ-X1-erj"/>
                     <connections>
-                        <outlet property="tableView" destination="zXv-wZ-aaX" id="exu-NG-25Q"/>
+                        <outlet property="tableView" destination="zXv-wZ-aaX" id="w6I-hp-fSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCM-6S-GEv" userLabel="First Responder" sceneMemberID="firstResponder"/>

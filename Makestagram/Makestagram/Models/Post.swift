@@ -35,9 +35,11 @@ class Post {
             let imageHeight = dict["image_height"] as? CGFloat,
             let createdAgo = dict["created_at"] as? TimeInterval,
             let likeCount = dict["like_count"] as? Int,
-            let uid = dict["uid"] as? String,
-            let username = dict["username"] as? String
-            else { return nil }
+            let userDict = dict["poster"] as? [String : Any],
+            let uid = userDict["uid"] as? String,
+            let username = userDict["username"] as? String
+        else { return nil }
+
         
         self.key = snapshot.key
         self.imageURL = imageURL
