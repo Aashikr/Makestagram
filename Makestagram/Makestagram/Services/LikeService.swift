@@ -17,13 +17,13 @@ struct LikeService {
         }
         let currentID = User.current.uid
         
-        let likesRef = Database.database().reference().child("postLikes").child(key).child(currentID)
+        let likesRef = DatabaseReference.toLocation(.postLikesUsers(postKey: key, uid: currentID))
         likesRef.setValue(true) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
-            let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
+            let likeCountRef = DatabaseReference.toLocation(.likeCounts(posterUID: post.poster.uid, postKey: key))
             likeCountRef.runTransactionBlock({ (MutableData)->TransactionResult in
                 let currentCount = MutableData.value as? Int ?? 0
                 MutableData.value = currentCount + 1
@@ -47,37 +47,32 @@ struct LikeService {
         }
         let currentID = User.current.uid
         
-        let  likesRef = Database.database().reference().child("postLikes").child(key).child(currentID)
+        let likesRef = DatabaseReference.toLocation(.postLikesUsers(postKey: key, uid: currentID))
         likesRef.setValue(nil) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+
                 return success(false)
             }
-            let likesRef = Database.database().reference().child("postLikes").child(key).child(currentID)
-            likesRef.setValue(true) { (error, _) in
+           
+            let likeCountRef = DatabaseReference.toLocation(.likeCounts(posterUID: post.poster.uid, postKey: key))
+            likeCountRef.runTransactionBlock({ (MutableData)->TransactionResult in
+                let currentCount = MutableData.value as? Int ?? 0
+                MutableData.value = currentCount - 1
+                
+                return TransactionResult.success(withValue: MutableData)
+            }, andCompletionBlock: { (error,_,_) in
                 if let error = error {
                     assertionFailure(error.localizedDescription)
-                    return success(false)
+                    success(false)
+                } else {
+                    success(true)
                 }
-                let likeCountRef = Database.database().reference().child("posts").child(post.poster.uid).child(key).child("like_count")
-                likeCountRef.runTransactionBlock({ (MutableData)->TransactionResult in
-                    let currentCount = MutableData.value as? Int ?? 0
-                    MutableData.value = currentCount - 1
-                    
-                    return TransactionResult.success(withValue: MutableData)
-                }, andCompletionBlock: { (error,_,_) in
-                    if let error = error {
-                        assertionFailure(error.localizedDescription)
-                        success(false)
-                    } else {
-                        success(true)
-                    }
-                })
-            }
-
-            
+            })
         }
     }
+    
+    
     
     static func isPostLiked(_ post: Post, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void){
         guard let postKey = post.key else {
@@ -85,7 +80,7 @@ struct LikeService {
             return completion(false)
         }
         
-        let likesRef = Database.database().reference().child("postLikes").child(postKey)
+        let likesRef = DatabaseReference.toLocation(.postLikesChild(postKey: postKey))
         likesRef.queryEqual(toValue: nil, childKey: User.current.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? [String: Bool]{
                 completion(true)

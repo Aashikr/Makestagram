@@ -85,8 +85,6 @@ extension HomeViewController: UITableViewDataSource {
             cell.delegate = self
             configureCell(cell, with: post)
             
-//            cell.timeAgoLabel.text = timestampFormatter.string(from: post.creationDate)
-//            cell.likeCountLabel.text = "\(post.likeCount) likes"
             return cell
         default:
             fatalError("Error: unexpected indexPath")

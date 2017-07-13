@@ -16,7 +16,7 @@ struct UserService {
     static func create(_ firUser: FIRUser, username: String, completion: @escaping(User?)->Void){
         let userAttrs = ["username" : username]
         
-        let ref = Database.database().reference().child("users").child(firUser.uid)
+        let ref = DatabaseReference.toLocation(.usersChild(uid: firUser.uid))
         ref.setValue(userAttrs){ (error,ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
@@ -30,7 +30,7 @@ struct UserService {
     }
     
     static func show(forUID uid: String, completion: @escaping (User?)->Void){
-        let ref = Database.database().reference().child("users").child(uid)
+        let ref = DatabaseReference.toLocation(.usersChild(uid: uid))
         ref.observeSingleEvent(of: .value, with: {(snapshot) in
             guard let user = User(snapshot: snapshot) else {
                 return completion(nil)
@@ -40,7 +40,7 @@ struct UserService {
     }
     
     static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+        let ref = DatabaseReference.toLocation(.postsChild(uid: user.uid))
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
@@ -105,8 +105,7 @@ struct UserService {
     }
     
     static func followers(for user: User, completion: @escaping ([String]) -> Void) {
-        let followersRef = Database.database().reference().child("followers").child(user.uid)
-        
+        let followersRef = DatabaseReference.toLocation(.followersChild(uid: user.uid))
         followersRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let followersDict = snapshot.value as? [String : Bool] else {
                 return completion([])
@@ -120,7 +119,7 @@ struct UserService {
     static func timeline(completion: @escaping ([Post]) -> Void) {
         let currentUser = User.current
         
-        let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
+        let timelineRef = DatabaseReference.toLocation(.timelineChild(uid: currentUser.uid))
         timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
                 else { return completion([]) }
