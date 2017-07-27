@@ -33,19 +33,25 @@ struct PostService {
         UserService.followers(for: currentUser) { (followerUIDs) in
             
             let timelinePostDict = ["poster_uid" : currentUser.uid]
-            
-            
             var updatedData: [String : Any] = ["timeline/\(currentUser.uid)/\(newPostKey)" : timelinePostDict]
-            
-            
             for uid in followerUIDs {
                 updatedData["timeline/\(uid)/\(newPostKey)"] = timelinePostDict
             }
-            
             let postDict = post.dictValue
             updatedData["posts/\(currentUser.uid)/\(newPostKey)"] = postDict
-            
             DatabaseReference.toLocation(.root).updateChildValues(updatedData)
+            
+            DatabaseReference.toLocation(.root).updateChildValues(updatedData, withCompletionBlock: { (error, ref) in
+                let postCountRef = Database.database().reference().child("users").child(currentUser.uid).child("post_count")
+                
+                postCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+                    let currentCount = mutableData.value as? Int ?? 0
+                    
+                    mutableData.value = currentCount + 1
+                    
+                    return TransactionResult.success(withValue: mutableData)
+                })
+            })
         }
     }
     
