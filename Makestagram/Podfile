@@ -16,6 +16,7 @@ target 'Makestagram' do
   pod 'FirebaseUI/Facebook'
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Google'
+  pod 'JSQMessagesViewController'
  # Pods for Makestagram
 
 end

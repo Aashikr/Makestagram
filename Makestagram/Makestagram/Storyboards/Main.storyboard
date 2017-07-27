@@ -43,11 +43,22 @@
                         <segue destination="b1c-CP-2Z7" kind="relationship" relationship="viewControllers" id="rK8-MD-6fn"/>
                         <segue destination="7jM-li-ZM5" kind="relationship" relationship="viewControllers" id="44x-nu-7lA"/>
                         <segue destination="gfw-5S-JhI" kind="relationship" relationship="viewControllers" id="vIK-ki-8aI"/>
+                        <segue destination="WHM-9G-dkg" kind="relationship" relationship="viewControllers" id="8b0-yH-S7s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fh-Vc-xnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1078" y="-253"/>
+        </scene>
+        <!--FindFriends-->
+        <scene sceneID="gVF-K2-5wF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FindFriends" id="WHM-9G-dkg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="j05-mU-Ch7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENX-xm-tK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1079" y="220"/>
         </scene>
         <!--Home-->
         <scene sceneID="x1Q-XJ-xCK">

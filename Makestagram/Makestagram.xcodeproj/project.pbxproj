@@ -41,6 +41,15 @@
 		848C94CE1F2992D3002DF3A0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C94CD1F2992D3002DF3A0 /* Profile.storyboard */; };
 		848C94D01F29964A002DF3A0 /* PostThumbImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94CF1F29964A002DF3A0 /* PostThumbImageCell.swift */; };
 		848C94D21F299ABD002DF3A0 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94D11F299ABD002DF3A0 /* ProfileHeaderView.swift */; };
+		848C94D41F2A26DA002DF3A0 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94D31F2A26DA002DF3A0 /* Chat.swift */; };
+		848C94D61F2A27C6002DF3A0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94D51F2A27C6002DF3A0 /* Message.swift */; };
+		848C94D81F2A3534002DF3A0 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94D71F2A3534002DF3A0 /* ChatService.swift */; };
+		848C94DA1F2A3FAA002DF3A0 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848C94D91F2A3FAA002DF3A0 /* Chat.storyboard */; };
+		848C94DC1F2A4015002DF3A0 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94DB1F2A4015002DF3A0 /* ChatListViewController.swift */; };
+		848C94DE1F2A44C8002DF3A0 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94DD1F2A44C8002DF3A0 /* ChatListCell.swift */; };
+		848C94E01F2A5F3F002DF3A0 /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94DF1F2A5F3F002DF3A0 /* NewChatViewController.swift */; };
+		848C94E21F2A602D002DF3A0 /* NewChatUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94E11F2A602D002DF3A0 /* NewChatUserCell.swift */; };
+		848C94E41F2A6442002DF3A0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848C94E31F2A6442002DF3A0 /* ChatViewController.swift */; };
 		8495F4D01F17C66B001C2A14 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DC5701F0FCE290067FC24 /* UserService.swift */; };
 		8495F4D11F17C67A001C2A14 /* DatabaseReference+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495F4CE1F17C0E3001C2A14 /* DatabaseReference+Location.swift */; };
 		84BCBF261F1C1FEE00E1B6F2 /* UITableView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BCBF251F1C1FEE00E1B6F2 /* UITableView+Utility.swift */; };
@@ -96,6 +105,15 @@
 		848C94CD1F2992D3002DF3A0 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Storyboards/Profile.storyboard; sourceTree = "<group>"; };
 		848C94CF1F29964A002DF3A0 /* PostThumbImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostThumbImageCell.swift; path = Views/PostThumbImageCell.swift; sourceTree = "<group>"; };
 		848C94D11F299ABD002DF3A0 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = Views/ProfileHeaderView.swift; sourceTree = "<group>"; };
+		848C94D31F2A26DA002DF3A0 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = Models/Chat.swift; sourceTree = "<group>"; };
+		848C94D51F2A27C6002DF3A0 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Models/Message.swift; sourceTree = "<group>"; };
+		848C94D71F2A3534002DF3A0 /* ChatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatService.swift; path = Services/ChatService.swift; sourceTree = "<group>"; };
+		848C94D91F2A3FAA002DF3A0 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chat.storyboard; path = Storyboards/Chat.storyboard; sourceTree = "<group>"; };
+		848C94DB1F2A4015002DF3A0 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListViewController.swift; path = Controllers/ChatListViewController.swift; sourceTree = "<group>"; };
+		848C94DD1F2A44C8002DF3A0 /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListCell.swift; path = Views/ChatListCell.swift; sourceTree = "<group>"; };
+		848C94DF1F2A5F3F002DF3A0 /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewChatViewController.swift; path = Controllers/NewChatViewController.swift; sourceTree = "<group>"; };
+		848C94E11F2A602D002DF3A0 /* NewChatUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewChatUserCell.swift; path = Views/NewChatUserCell.swift; sourceTree = "<group>"; };
+		848C94E31F2A6442002DF3A0 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = Controllers/ChatViewController.swift; sourceTree = "<group>"; };
 		8495F4CE1F17C0E3001C2A14 /* DatabaseReference+Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseReference+Location.swift"; path = "Extensions/DatabaseReference+Location.swift"; sourceTree = "<group>"; };
 		84BCBF251F1C1FEE00E1B6F2 /* UITableView+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Utility.swift"; path = "Extensions/UITableView+Utility.swift"; sourceTree = "<group>"; };
 		84CFDAEF1F150D6F0067DFD0 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
@@ -204,6 +222,7 @@
 				848C94CD1F2992D3002DF3A0 /* Profile.storyboard */,
 				8432D1CF1F167242003E0794 /* FindFriends.storyboard */,
 				84EA85351F140AEE0098DBE2 /* Home.storyboard */,
+				848C94D91F2A3FAA002DF3A0 /* Chat.storyboard */,
 				843058F71F0E7CB100DC04C5 /* Login.storyboard */,
 				843058DB1F0E75B900DC04C5 /* Assets.xcassets */,
 			);
@@ -219,6 +238,9 @@
 				844DC57B1F0FFDE60067FC24 /* HomeViewController.swift */,
 				84EA85241F13BEA40098DBE2 /* MainTabBarController.swift */,
 				848C94CB1F2990FC002DF3A0 /* ProfileViewController.swift */,
+				848C94DB1F2A4015002DF3A0 /* ChatListViewController.swift */,
+				848C94DF1F2A5F3F002DF3A0 /* NewChatViewController.swift */,
+				848C94E31F2A6442002DF3A0 /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -228,6 +250,8 @@
 			children = (
 				843058FC1F0EBD5600DC04C5 /* User.swift */,
 				84EA852D1F13FD570098DBE2 /* Post.swift */,
+				848C94D31F2A26DA002DF3A0 /* Chat.swift */,
+				848C94D51F2A27C6002DF3A0 /* Message.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -240,6 +264,7 @@
 				84EA852B1F13FB1E0098DBE2 /* PostService.swift */,
 				84D07F891F1546740001159E /* LikeService.swift */,
 				8432D1CD1F166D1A003E0794 /* FollowService.swift */,
+				848C94D71F2A3534002DF3A0 /* ChatService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -267,6 +292,8 @@
 				8432D1D11F1672F7003E0794 /* FindFriendsCell.swift */,
 				848C94CF1F29964A002DF3A0 /* PostThumbImageCell.swift */,
 				848C94D11F299ABD002DF3A0 /* ProfileHeaderView.swift */,
+				848C94DD1F2A44C8002DF3A0 /* ChatListCell.swift */,
+				848C94E11F2A602D002DF3A0 /* NewChatUserCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -365,6 +392,7 @@
 				8427803C1F27DEE700C1DAA9 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				842780361F27DEE700C1DAA9 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				842780331F27DEE700C1DAA9 /* OpenSans-Bold.ttf in Resources */,
+				848C94DA1F2A3FAA002DF3A0 /* Chat.storyboard in Resources */,
 				84EA85361F140AEE0098DBE2 /* Home.storyboard in Resources */,
 				843058F81F0E7CB100DC04C5 /* Login.storyboard in Resources */,
 				843058EC1F0E7A2000DC04C5 /* LaunchScreen.storyboard in Resources */,
@@ -438,12 +466,17 @@
 				848C94D21F299ABD002DF3A0 /* ProfileHeaderView.swift in Sources */,
 				84D07F881F152C510001159E /* PostActionCell.swift in Sources */,
 				84D07F8A1F1546740001159E /* LikeService.swift in Sources */,
+				848C94DE1F2A44C8002DF3A0 /* ChatListCell.swift in Sources */,
 				8495F4D01F17C66B001C2A14 /* UserService.swift in Sources */,
 				84EA852E1F13FD570098DBE2 /* Post.swift in Sources */,
+				848C94DC1F2A4015002DF3A0 /* ChatListViewController.swift in Sources */,
 				84CFDAF01F150D6F0067DFD0 /* PostImageCell.swift in Sources */,
+				848C94D61F2A27C6002DF3A0 /* Message.swift in Sources */,
 				842780251F27CC3600C1DAA9 /* MGPaginationHelper.swift in Sources */,
+				848C94E21F2A602D002DF3A0 /* NewChatUserCell.swift in Sources */,
 				8432D1D21F1672F7003E0794 /* FindFriendsCell.swift in Sources */,
 				848C94D01F29964A002DF3A0 /* PostThumbImageCell.swift in Sources */,
+				848C94E01F2A5F3F002DF3A0 /* NewChatViewController.swift in Sources */,
 				84EA85301F1405E20098DBE2 /* UIImage+Size.swift in Sources */,
 				842780401F27E2A600C1DAA9 /* UIFont+Utility.swift in Sources */,
 				844DC5731F0FDBAE0067FC24 /* Constants.swift in Sources */,
@@ -453,11 +486,14 @@
 				844DC57C1F0FFDE60067FC24 /* HomeViewController.swift in Sources */,
 				8495F4D11F17C67A001C2A14 /* DatabaseReference+Location.swift in Sources */,
 				84EA85341F1406EA0098DBE2 /* StorageReference+Post.swift in Sources */,
+				848C94E41F2A6442002DF3A0 /* ChatViewController.swift in Sources */,
 				844DC57A1F0FFDD80067FC24 /* FindFriendsViewController.swift in Sources */,
 				84EA852C1F13FB1E0098DBE2 /* PostService.swift in Sources */,
 				843058D51F0E75B900DC04C5 /* AppDelegate.swift in Sources */,
 				84D07F861F1525600001159E /* PostHeaderCell.swift in Sources */,
 				844DC5761F0FDCCF0067FC24 /* Storyboards+Utility.swift in Sources */,
+				848C94D41F2A26DA002DF3A0 /* Chat.swift in Sources */,
+				848C94D81F2A3534002DF3A0 /* ChatService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -161,7 +161,14 @@
                             <constraint firstItem="zXv-wZ-aaX" firstAttribute="leading" secondItem="NvC-oo-LZ9" secondAttribute="leading" id="jYz-Fh-Dq2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Makestagram" id="PRQ-X1-erj"/>
+                    <navigationItem key="navigationItem" title="Makestagram" id="PRQ-X1-erj">
+                        <barButtonItem key="rightBarButtonItem" title="Chat" id="oUi-hK-X8c">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="znD-F8-wlZ" kind="presentation" id="ll9-H3-HCh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zXv-wZ-aaX" id="w6I-hp-fSV"/>
                     </connections>
@@ -191,6 +198,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZh-fW-Jez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="-1019"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="pmx-XQ-vcb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="znD-F8-wlZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IeO-GD-DbD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="-1020"/>
         </scene>
     </scenes>
     <resources>
